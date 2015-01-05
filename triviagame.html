@@ -1,0 +1,85 @@
+<!-- Basic game concept: trivia night!
+1. Choose your trivia category: movies, songs, or history.
+2. Answer 4 numerical questions
+3. You will get hints to whether your guess is too high or too low
+4. You have 3 guesses each to get the answer right
+5. (Optional) You have 10 seconds each before your time runs out! -->
+
+<title>Adam's Trivia Game!</title>
+
+<script>
+	var category,
+		guess,
+		result,
+		correctAnswer = "Correct!! You've now gotten ",
+		answerCounter = 0,
+		answersRight =  " answers right. Now for a harder one:\n\n",
+		lowAnswer = "Too low, try again!",
+		highAnswer = "Too high, try again!",
+		nonAnswer = "Please guess a number!",
+		moviesq1 = "How many films has Christian Bale been in?",
+		moviesa1 = 48,
+		moviesq2 = "What year was The Machinist released?",
+		moviesa2 = 2004,
+		moviesq3 = "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		moviesa3 = 6,
+		moviesq4 = "In what year was Christian Bale born?",
+		moviesa4 = 1974;
+
+	// Introduction
+	alert("Welcome to Adam's Trivia Night! Here are the rules:\n1. Choose your trivia category: movies, songs, or history\n2. Answer 4 numerical questions\n3. You will get hints to whether your guess is too high or too low\n4. You have 3 guesses each to get the answer right.\nGood luck!");
+	
+	// Asks user for category of choice
+	category = prompt("Do you want movies, songs, or history?");
+	
+	// Begin questions
+	if (category == "movies") {
+		while (guess != moviesa1) {
+			guess = prompt(moviesq1);
+			if (guess == moviesa1) {
+				answerCounter++;
+			} else if (guess > moviesa1) { 
+				alert(highAnswer);
+			} else if (guess < moviesa1) {
+				alert(lowAnswer);
+			} else {alert(nonAnswer);
+			};
+		};
+		while (guess != moviesa2) {
+			guess = prompt(correctAnswer + answerCounter + answersRight + moviesq2);
+			if (guess == moviesa2) {
+				answerCounter++;
+			} else if (guess > moviesa2) {
+				alert("Too high! Try again.");
+			} else if (guess < moviesa2) {
+				alert("Too low! Try again.");
+			} else {alert("Please guess a number!");
+			};
+		};
+		while (guess != moviesa3) {
+			guess = prompt(correctAnswer + answerCounter + answersRight + moviesq3);
+			if (guess == moviesa3) {
+				answerCounter++;
+			} else if (guess > moviesa3) {
+				alert("Too high! Try again.");
+			} else if (guess < moviesa3) {
+				alert("Too low! Try again.");
+			} else {alert("Please guess a number!");
+			};
+		};
+		while (guess != moviesa4) {
+			guess = prompt(correctAnswer + answerCounter + answersRight + moviesq4);
+			if (guess == moviesa4) {
+				answerCounter++;
+			} else if (guess > moviesa4) {
+				alert("Too high! Try again.");
+			} else if (guess < moviesa4) {
+				alert("Too low! Try again.");
+			} else {alert("Please guess a number!");
+			};
+		};
+	} else {alert("Just choose 1 for now!");
+		};
+</script>
+
+	
