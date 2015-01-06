@@ -2,8 +2,9 @@
 1. Choose your trivia category: movies, songs, or history.
 2. Answer 4 numerical questions
 3. You will get hints to whether your guess is too high or too low
-4. You have 3 guesses each to get the answer right
-5. (Optional) You have 10 seconds each before your time runs out! -->
+4. !! You have 3 guesses each to get the answer right
+5. !! Add a quit feature to exit the screen at any prompt
+6. !! You have 10 seconds each before your time runs out! -->
 
 <title>Adam's Trivia Game!</title>
 
@@ -67,26 +68,27 @@
 	category = prompt("Do you want movies, music, or history?");
 
 	// Begin questions
-	if (guess = "quit") {
-		close();
-	}
-	else if (category == "movies") {askQuestion(moviesa1, moviesq1), 
+	if (category == "movies") {
+		askQuestion(moviesa1, moviesq1), 
 		askQuestion(moviesa2, moviesq2),
 		askQuestion(moviesa3, moviesq3),
 		askQuestion(moviesa4, moviesq4);
 	}
-	else if (category == "music") {askQuestion(musica1, musicq1), 
+	else if (category == "music") {
+		askQuestion(musica1, musicq1), 
 		askQuestion(musica2, musicq2),
 		askQuestion(musica3, musicq3),
 		askQuestion(musica4, musicq4);
 	}
-	else if (category == "history") {askQuestion(historya1, historyq1), 
+	else if (category == "history") {
+		askQuestion(historya1, historyq1), 
 		askQuestion(historya2, historyq2),
 		askQuestion(historya3, historyq3),
 		askQuestion(historya4, historyq4);
 	}
 	else {alert("Choose movies, music, or history please!");
 	};
+
 </script>
 
 	
