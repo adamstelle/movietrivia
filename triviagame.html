@@ -2,48 +2,65 @@
 1. Choose your trivia category: movies, songs, or history.
 2. Answer 4 numerical questions
 3. You will get hints to whether your guess is too high or too low
-4. You have 3 guesses each to get the answer right
-5. (Optional) You have 10 seconds each before your time runs out! -->
+4. !! You have 3 guesses each to get the answer right
+5. !! Add a quit feature to exit the screen at any prompt
+6. !! You have 10 seconds each before your time runs out! 
+7. !! Create objects to manage the trivia and answers. -->
 
 <title>Adam's Trivia Game!</title>
 
 <script>
+
+	var movieQuestions = [
+		"How many films has Christian Bale been in?",
+		"What year was The Machinist released?",
+		"How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		"In what year was Christian Bale born?"
+	];
+	var movieAnswers = [
+		48,
+		2004,
+		6,
+		1974
+	];
+	var musicQuestions = [
+		"How many films has Christian Bale been in?",
+		"What year was The Machinist released?",
+		"How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		"In what year was Christian Bale born?"
+	];
+	var musicAnswers = [
+		48,
+		2004,
+		6,
+		1974
+	];
+	var historyQuestions = [
+		"How many films has Christian Bale been in?",
+		"What year was The Machinist released?",
+		"How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		"In what year was Christian Bale born?"
+	];
+	var historyAnswers = [
+		48,
+		2004,
+		6,
+		1974
+	];
+
 	var category,
 		guess,
 		answerCounter = 0,
 		correctAnswer = "Correct!! You've now gotten ",
 		answersRight =  " answers right."
-		nonAnswer = "Please guess a number! If you want to exit, press Q",
-		moviesq1 = "How many films has Christian Bale been in?",
-		moviesa1 = 48,
-		moviesq2 = "What year was The Machinist released?",
-		moviesa2 = 2004,
-		moviesq3 = "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
-		moviesa3 = 6,
-		moviesq4 = "In what year was Christian Bale born?",
-		moviesa4 = 1974,
-		musicq1 = "How many films has Christian Bale been in?",
-		musica1 = 48,
-		musicq2 = "What year was The Machinist released?",
-		musica2 = 2004,
-		musicq3 = "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
-		musica3 = 6,
-		musicq4 = "In what year was Christian Bale born?",
-		musica4 = 1974,
-		historyq1 = "How many films has Christian Bale been in?",
-		historya1 = 48,
-		historyq2 = "What year was The Machinist released?",
-		historya2 = 2004,
-		historyq3 = "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
-		historya3 = 6,
-		historyq4 = "In what year was Christian Bale born?",
-		historya4 = 1974;
+		nonAnswer = "Please guess a number! If you want to exit, press Q";
+
 
 	// Introduction
 	alert("Welcome to Adam's Trivia Night! Here are the rules:\n1. Choose your trivia category: movies, music, or history\n2. Answer 4 numerical questions\n3. You will get hints to whether your guess is too high or too low\n4. You have 3 guesses each to get the answer right.\nTo exit, type 'quit'.\nGood luck!");
 	
 	// Introduce core question function
-	function askQuestion(whichAnswer, whichQuestion){
+	function askQuestion(whichQuestion, whichAnswer){
 		var lowAnswer = "Too low, try again!",
 			highAnswer = "Too high, try again!";
 		while (guess != whichAnswer) {
@@ -67,26 +84,27 @@
 	category = prompt("Do you want movies, music, or history?");
 
 	// Begin questions
-	if (guess = "quit") {
-		close();
+	if (category == "movies") {
+		askQuestion(movieQuestions[0], movieAnswers[0]), 
+		askQuestion(movieQuestions[1], movieAnswers[1]),
+		askQuestion(movieQuestions[2], movieAnswers[2]),
+		askQuestion(movieQuestions[3], movieAnswers[3]);
 	}
-	else if (category == "movies") {askQuestion(moviesa1, moviesq1), 
-		askQuestion(moviesa2, moviesq2),
-		askQuestion(moviesa3, moviesq3),
-		askQuestion(moviesa4, moviesq4);
+	else if (category == "music") {
+		askQuestion(movieQuestions[0], movieAnswers[0]), 
+		askQuestion(movieQuestions[1], movieAnswers[1]),
+		askQuestion(movieQuestions[2], movieAnswers[2]),
+		askQuestion(movieQuestions[3], movieAnswers[3]);
 	}
-	else if (category == "music") {askQuestion(musica1, musicq1), 
-		askQuestion(musica2, musicq2),
-		askQuestion(musica3, musicq3),
-		askQuestion(musica4, musicq4);
-	}
-	else if (category == "history") {askQuestion(historya1, historyq1), 
-		askQuestion(historya2, historyq2),
-		askQuestion(historya3, historyq3),
-		askQuestion(historya4, historyq4);
+	else if (category == "history") {
+		askQuestion(movieQuestions[0], movieAnswers[0]), 
+		askQuestion(movieQuestions[1], movieAnswers[1]),
+		askQuestion(movieQuestions[2], movieAnswers[2]),
+		askQuestion(movieQuestions[3], movieAnswers[3]);
 	}
 	else {alert("Choose movies, music, or history please!");
 	};
+
 </script>
 
 	
