@@ -8,58 +8,44 @@
 7. !! Create objects to manage the trivia and answers. -->
 
 <title>Adam's Trivia Game!</title>
-
 <script>
-
-	var movieQuestions = [
-		"How many films has Christian Bale been in?",
-		"What year was The Machinist released?",
-		"How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
-		"In what year was Christian Bale born?"
-	];
-	var movieAnswers = [
-		48,
-		2004,
-		6,
-		1974
-	];
-	var musicQuestions = [
-		"How many films has Christian Bale been in?",
-		"What year was The Machinist released?",
-		"How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
-		"In what year was Christian Bale born?"
-	];
-	var musicAnswers = [
-		48,
-		2004,
-		6,
-		1974
-	];
-	var historyQuestions = [
-		"How many films has Christian Bale been in?",
-		"What year was The Machinist released?",
-		"How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
-		"In what year was Christian Bale born?"
-	];
-	var historyAnswers = [
-		48,
-		2004,
-		6,
-		1974
-	];
-
+	var movie = [ {
+		Question: "How many films has Christian Bale been in?",
+		Question: "What year was The Machinist released?",
+		Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		Question: "In what year was Christian Bale born?",
+    Answer: 48,
+    Answer: 2004,
+    Answer: 6,
+    Answer: 1974
+  } ];
+	var music = [ {
+		Question: "How many films has Christian Bale been in?",
+		Question: "What year was The Machinist released?",
+		Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		Question: "In what year was Christian Bale born?",
+    Answer: 48,
+    Answer: 2004,
+    Answer: 6,
+    Answer: 1974
+  }	];
+	var history = [ {
+		Question: "How many films has Christian Bale been in?",
+		Question: "What year was The Machinist released?",
+		Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?",
+		Question: "In what year was Christian Bale born?",
+    Answer: 48,
+    Answer: 2004,
+    Answer: 6,
+    Answer: 1974
+	} ];
 	var category,
 		guess,
 		answerCounter = 0,
 		correctAnswer = "Correct!! You've now gotten ",
 		answersRight =  " answers right."
 		nonAnswer = "Please guess a number! If you want to exit, press Q";
-
-
-	// Introduction
 	alert("Welcome to Adam's Trivia Night! Here are the rules:\n1. Choose your trivia category: movies, music, or history\n2. Answer 4 numerical questions\n3. You will get hints to whether your guess is too high or too low\n4. You have 3 guesses each to get the answer right.\nTo exit, type 'quit'.\nGood luck!");
-	
-	// Introduce core question function
 	function askQuestion(whichQuestion, whichAnswer){
 		var lowAnswer = "Too low, try again!",
 			highAnswer = "Too high, try again!";
@@ -79,32 +65,27 @@
 		};
 		alert(correctAnswer + answerCounter + answersRight);
 	};
-
-	// Asks user for category of choice
 	category = prompt("Do you want movies, music, or history?");
-
-	// Begin questions
 	if (category == "movies") {
-		askQuestion(movieQuestions[0], movieAnswers[0]), 
-		askQuestion(movieQuestions[1], movieAnswers[1]),
-		askQuestion(movieQuestions[2], movieAnswers[2]),
-		askQuestion(movieQuestions[3], movieAnswers[3]);
+		askQuestion(movie[0].Question, movie[0].Answer), 
+		askQuestion(movie[1].Question, movie[1].Answer),
+		askQuestion(movie[2].Question, movie[2].Answer),
+		askQuestion(movie[3].Question, movie[3].Answer);
 	}
 	else if (category == "music") {
-		askQuestion(movieQuestions[0], movieAnswers[0]), 
-		askQuestion(movieQuestions[1], movieAnswers[1]),
-		askQuestion(movieQuestions[2], movieAnswers[2]),
-		askQuestion(movieQuestions[3], movieAnswers[3]);
+		askQuestion(movie[0].Question, movie[0].Answer), 
+		askQuestion(movie[1].Question, movie[1].Answer),
+		askQuestion(movie[2].Question, movie[2].Answer),
+		askQuestion(movie[3].Question, movie[3].Answer);
 	}
 	else if (category == "history") {
-		askQuestion(movieQuestions[0], movieAnswers[0]), 
-		askQuestion(movieQuestions[1], movieAnswers[1]),
-		askQuestion(movieQuestions[2], movieAnswers[2]),
-		askQuestion(movieQuestions[3], movieAnswers[3]);
+		askQuestion(movie[0].Question, movie[0].Answer), 
+		askQuestion(movie[1].Question, movie[1].Answer),
+		askQuestion(movie[2].Question, movie[2].Answer),
+		askQuestion(movie[3].Question, movie[3].Answer);
 	}
 	else {alert("Choose movies, music, or history please!");
 	};
-
 </script>
 
 	
