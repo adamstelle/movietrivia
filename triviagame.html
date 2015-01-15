@@ -9,68 +9,68 @@
 
 <title>Adam's Trivia Game!</title>
 <script>
-	var movie = [ 
-	{	Question: "How many films has Christian Bale been in?", Answer: 48 },
-	{	Question: "What year was The Machinist released?", Answer: 2004 },		
-	{	Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?", Answer: 6 },
-	{	Question: "In what year was Christian Bale born?", Answer: 1974 } ];
-	var music = [ 
-	{	Question: "How many films has Christian Bale been in?", Answer: 48 },
-	{	Question: "What year was The Machinist released?", Answer: 2004 },		
-	{	Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?", Answer: 6 },
-	{	Question: "In what year was Christian Bale born?", Answer: 1974 } ];
-	var history = [ 
-	{	Question: "How many films has Christian Bale been in?", Answer: 48 },
-	{	Question: "What year was The Machinist released?", Answer: 2004 },		
-	{	Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?", Answer: 6 },
-	{	Question: "In what year was Christian Bale born?", Answer: 1974 } ];
-	var category,
-		guess,
-		answerCounter = 0,
-		correctAnswer = "Correct!! You've now gotten ",
-		answersRight =  " answers right."
-		nonAnswer = "Please guess a number! If you want to exit, press Q";
-	alert("Welcome to Adam's Trivia Night! Here are the rules:\n1. Choose your trivia category: movies, music, or history\n2. Answer 4 numerical questions\n3. You will get hints to whether your guess is too high or too low\n4. You have 3 guesses each to get the answer right.\nTo exit, type 'quit'.\nGood luck!");
-	function askQuestion(whichQuestion, whichAnswer){
-		var lowAnswer = "Too low, try again!",
-			highAnswer = "Too high, try again!";
-		while (guess != whichAnswer) {
-			guess = prompt(whichQuestion);
-			if (guess == whichAnswer) {
-				answerCounter++;
-			} 
-			else if (guess > whichAnswer) { 
-				alert(highAnswer);
-			} 
-			else if (guess < whichAnswer) {
-				alert(lowAnswer);
-			}
-			else {alert(nonAnswer);
-			};
-		};
-		alert(correctAnswer + answerCounter + answersRight);
-	};
-	category = prompt("Do you want movies, music, or history?");
-	if (category == "movies") {
-		askQuestion(movie[0].Question, movie[0].Answer), 
-		askQuestion(movie[1].Question, movie[1].Answer),
-		askQuestion(movie[2].Question, movie[2].Answer),
-		askQuestion(movie[3].Question, movie[3].Answer);
-	}
-	else if (category == "music") {
-		askQuestion(movie[0].Question, movie[0].Answer), 
-		askQuestion(movie[1].Question, movie[1].Answer),
-		askQuestion(movie[2].Question, movie[2].Answer),
-		askQuestion(movie[3].Question, movie[3].Answer);
-	}
-	else if (category == "history") {
-		askQuestion(movie[0].Question, movie[0].Answer), 
-		askQuestion(movie[1].Question, movie[1].Answer),
-		askQuestion(movie[2].Question, movie[2].Answer),
-		askQuestion(movie[3].Question, movie[3].Answer);
-	}
-	else {alert("Choose movies, music, or history please!");
-	};
+  var movie = [ 
+  { Question: "How many films has Christian Bale been in?", Answer: 48 },
+  { Question: "What year was The Machinist released?", Answer: 2004 },    
+  { Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?", Answer: 6 },
+  { Question: "In what year was Christian Bale born?", Answer: 1974 } ];
+  var music = [ 
+  { Question: "How many films has Christian Bale been in?", Answer: 48 },
+  { Question: "What year was The Machinist released?", Answer: 2004 },    
+  { Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?", Answer: 6 },
+  { Question: "In what year was Christian Bale born?", Answer: 1974 } ];
+  var history = [ 
+  { Question: "How many films has Christian Bale been in?", Answer: 48 },
+  { Question: "What year was The Machinist released?", Answer: 2004 },    
+  { Question: "How many weeks did Heath Ledger spend in a hotel room to prepare for his role as The Joker?", Answer: 6 },
+  { Question: "In what year was Christian Bale born?", Answer: 1974 } ];
+  var category,
+    guess,
+    answerCounter = 0,
+    correctAnswer = "Correct!! You've now gotten ",
+    answersRight =  " answers right."
+    nonAnswer = "Please guess a number! If you want to exit, press Q";
+  alert("Welcome to Adam's Trivia Night! Here are the rules:\n1. Choose your trivia category: movies, music, or history\n2. Answer 4 numerical questions\n3. You will get hints to whether your guess is too high or too low\n4. You have 3 guesses each to get the answer right.\nTo exit, type 'quit'.\nGood luck!");
+  function askQuestion(whichQuestion, whichAnswer){
+    var lowAnswer = "Too low, try again!",
+      highAnswer = "Too high, try again!";
+    while (guess != whichAnswer) {
+      guess = prompt(whichQuestion);
+      if (guess == whichAnswer) {
+        answerCounter++;
+      } 
+      else if (guess > whichAnswer) { 
+        alert(highAnswer);
+      } 
+      else if (guess < whichAnswer) {
+        alert(lowAnswer);
+      }
+      else {alert(nonAnswer);
+      };
+    };
+    alert(correctAnswer + answerCounter + answersRight);
+  };
+  category = prompt("Do you want movies, music, or history?");
+  if (category == "movies") {
+    askQuestion(movie[0].Question, movie[0].Answer), 
+    askQuestion(movie[1].Question, movie[1].Answer),
+    askQuestion(movie[2].Question, movie[2].Answer),
+    askQuestion(movie[3].Question, movie[3].Answer);
+  }
+  else if (category == "music") {
+    askQuestion(movie[0].Question, movie[0].Answer), 
+    askQuestion(movie[1].Question, movie[1].Answer),
+    askQuestion(movie[2].Question, movie[2].Answer),
+    askQuestion(movie[3].Question, movie[3].Answer);
+  }
+  else if (category == "history") {
+    askQuestion(movie[0].Question, movie[0].Answer), 
+    askQuestion(movie[1].Question, movie[1].Answer),
+    askQuestion(movie[2].Question, movie[2].Answer),
+    askQuestion(movie[3].Question, movie[3].Answer);
+  }
+  else {alert("Choose movies, music, or history please!");
+  };
 </script>
 
-	
+  
